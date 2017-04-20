@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>exercice vue</title>
+</head>
+<link rel="stylesheet" href="css/style.css">
+<body>
+
+	<div id="app">
+		<h2>{{message}}</h2>
+		<span v-text="message1"></span>
+		<span v-html="message1"></span>
+		<span v-html="message1"></span>
+		<p v-if="show">VOUS VOYEZ en IF</p>
+		<p v-show="show">VOUS Voyez en SHOW </p>
+		<ol>
+			<li v-for="list in listes">
+				{{list.text}}
+			</li>
+		</ol>
+
+		<p v-bind:class="{ active : show}">class active</p>
+		<p v-bind:style="{  color: newColor, fontSize: newFont + 'px' }">Changement de style</p>
+		
+
+	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.2.6/vue.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
